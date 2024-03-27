@@ -1,24 +1,35 @@
-import PokemonCard from "./components/pokemonCard";
+import Avatar from "./components/Avatar.jsx";
 
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
-const pokemon = {
-  name: "bulbasaur",
-  imgSrc:
-    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-};
+function App() {
 
-function App (){
-  return <PokemonCard pokemon={pokemon}/>;
-    
+  const bart = {
+    image: "https://www.stickees.com/files/cartoon/the-simpsons/2239-bart-simpson-.png",
+    firstName: "Bart",
+    lastName: "Simpson"
+  };
+
+  const homer = {
+    image: "https://www.stickees.com/files/cartoon/the-simpsons/2248-homer-simpson-happy.png",
+    firstName: "Homer",
+    lastName: "Simpson",
+  };
+
+  return (
+    <>
+      <Avatar
+      img={bart.image}
+      firstName={bart.firstName}
+      lastName={bart.lastName}
+      />   
+      <Avatar
+      img={homer.image}
+      firstName={homer.firstName}
+      lastName={homer.lastName}
+      />
+      </>
+
+  )
 }
+
 
 export default App;
